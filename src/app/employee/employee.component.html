@@ -1,0 +1,26 @@
+<h1>Dolgozók</h1>
+
+<div>
+    <label for="">Név</label>
+    <input type="text" [(ngModel)] = 'fullname'
+    class = "form-control"><br>
+
+    <label for="">Település</label>
+    <input type="text" [(ngModel)] = 'city'
+    class = "form-control"><br>
+
+    <label for="">Fizetés</label>
+    <input type="text" [(ngModel)] = 'salary'
+    class = "form-control"><br>
+
+    <button (click)="addButton()"
+    class="btn btn-primary">Hozzáad</button>
+</div>
+
+<table class="table">
+    <tr class="table-primary" *ngFor='let employee of employees'>
+        <td>{{employee.fullname}}</td>
+        <td>{{employee.city}}</td>
+        <td>{{employee.salary}}</td>
+    </tr>
+</table>
